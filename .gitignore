@@ -1,0 +1,9 @@
+.next/
+node_modules/
+.env*
+!.env.example
+
+.overseer/snapshots/
+.overseer/reports/
+.overseer/explain-request.md
+.overseer/explanations.json
