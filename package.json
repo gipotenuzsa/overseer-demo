@@ -1,5 +1,5 @@
 {
-  "name": "overseer-good-fixture",
+  "name": "overseer-bad-fixture",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "@supabase/supabase-js": "2.118.0"
+    "@supabase/supabase-js": "2.118.0",
+    "nanoid": "5.1.6"
   }
 }

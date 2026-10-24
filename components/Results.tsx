@@ -1,10 +1,11 @@
 'use client';
-import { useState } from 'react';
+import { adminKey } from '@/lib/admin';
+import { calculateFirst } from '@/lib/first';
+import { calculateSecond } from '@/lib/second';
+import { longMessage } from '@/lib/long';
 export function Results() {
-  const [message, setMessage] = useState('Ready');
   async function save() {
-    const response = await fetch('/api/results', { method: 'POST', body: JSON.stringify({ score: 10 }) });
-    setMessage(response.ok ? 'Saved' : 'Sign in to save');
+    await fetch('/api/results', { method: 'POST', body: JSON.stringify({ score: calculateFirst(2) + calculateSecond(3) }) });
   }
-  return <section><button onClick={save}>Save result</button><p>{message}</p></section>;
+  return <section><button onClick={save}>Save</button><div dangerouslySetInnerHTML={{ __html: longMessage }} /><span>{adminKey}</span></section>;
 }
